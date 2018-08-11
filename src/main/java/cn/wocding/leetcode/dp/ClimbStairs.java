@@ -11,9 +11,8 @@ public class ClimbStairs {
      * @return
      */
     public int climbStairs(int n) {
-        int arrs[]=new int[n+1];
         if (n<=0){
-            return -1;
+            return 0;
         }
         if (n==1){
             return 1;
@@ -21,6 +20,7 @@ public class ClimbStairs {
         if (n==2) {
             return 2;
         }
+        int arrs[]=new int[n+1];
         arrs[1]=1;
         arrs[2]=2;
         for (int i=3;i<=n;i++){
