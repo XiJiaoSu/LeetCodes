@@ -1,13 +1,14 @@
-LeetCode Programming
-==
-#Dynamic Programming Codes
+#LeetCode Programming
 
-##ways of solving DP
+
+##Dynamic Programming Codes
+
+###ways of solving DP
     1)确认`原问题`与`子问题`
     2)确认状态
     3)确认`边界`状态的值
     4)确定`状态转移方程`
-## Demos
+### Demos
 [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/description/):
 You are climbing a stair case. It takes n steps to reach to the top.
 Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
@@ -48,3 +49,6 @@ Given an integer array nums, find the contiguous subarray (containing at least o
    否则:result[i]=arr[i]
     <br>
     递推公式: result[i]=max{result[i-1]+arr[i],num[i]}
+
+
+#
