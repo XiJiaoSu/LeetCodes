@@ -31,6 +31,20 @@ Given a list of non-negative integers representing the amount of money of each h
       状态转移方程:<br>
              第i 间房子的最优解依赖于 res[i-1]，res[i-2]+num[i]时的值，
              最终的方程式为:res[i]=max{num[i-1],num[i-2]+num[i]}
-
-           
-
+             
+             
+[53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/description/)
+Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
+<br>
+思路:<br>
+   在House Robber 与ClimbStairs中我们使用的递推公式是：i 个状态依赖于第 `i-1` 或者 `i-2` 个状态。在本题中，由于第i个状态(子数组首元素-sub[0])不一定是原数组的首元素(arr[0])。
+   但是 第i个状态一定是以arr[i]为结尾的。<br>
+   
+   问题变成: 以原数组arr中第i个元素结尾的每个子数组中的最大值
+   <br>
+   边界: result[0]=arr[0]
+   <br>
+   如果 result[i-1]>0, 那么:result[i]=result[i-1]+arr[i]
+   否则:result[i]=arr[i]
+    <br>
+    递推公式: result[i]=max{result[i-1]+arr[i],num[i]}
